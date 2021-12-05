@@ -1,0 +1,23 @@
+:root {
+    --eas-box-per-side: 16;
+}
+
+body {
+    height: 100vh;
+    border: 1px solid black;
+}
+
+#eas-container {
+    display: grid;
+    grid-template-columns: repeat(var(--eas-box-per-side), 1fr);
+    grid-template-rows: repeat(var(--eas-box-per-side), 1fr);
+    height: 80%;
+    width: 80%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.eas-block {
+    border: 1px solid black;
+    margin: 0;
+}

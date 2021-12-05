@@ -7,7 +7,7 @@ body {
     border: 1px solid black;
 }
 
-#eas-container {
+#eas-draw-container {
     display: grid;
     grid-template-columns: repeat(var(--eas-box-per-side), 1fr);
     grid-template-rows: repeat(var(--eas-box-per-side), 1fr);

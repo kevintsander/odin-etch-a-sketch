@@ -1,5 +1,5 @@
 function createSketchDivs(countPerSide) {
-    const easContainer = document.querySelector("#eas-container");
+    const easContainer = document.querySelector("#eas-draw-container");
 
     for(let i = 0; i < (countPerSide * countPerSide); i++) {
         const newDiv = document.createElement('div');

@@ -119,10 +119,10 @@ button > * {
         hsl(51, 100%, 50%) 40%,
         hsl(102, 100%, 50%) 40%,
         hsl(102, 100%, 50%) 60%,
-        hsl(153, 100%, 50%) 60%,
-        hsl(153, 100%, 50%) 80%,
+        hsl(204, 100%, 50%) 60%,
         hsl(204, 100%, 50%) 80%,
-        hsl(204, 100%, 50%) 100%
+        hsl(255, 100%, 50%) 80%,
+        hsl(255, 100%, 50%) 100%
     );
 }
 
@@ -140,8 +140,8 @@ button > * {
     padding: 6% 0 0 0;
     height: 90vmin;
     width: 90vmin;
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 300px;
+    min-height: 300px;
     box-shadow: 3px 3px 10px black;
 }
 

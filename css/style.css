@@ -187,7 +187,6 @@ button > * {
 
     width: 80%;
     height: 80%;
-    /*border: 1px solid black;*/
     margin: 0;
     padding: 10px;
     box-shadow: inset 1px 1px 5px black, 0px 0px 10px hsla(0, 100%, 0%, 50%);

@@ -91,7 +91,8 @@ sketchTypeButtons.forEach(button => button.addEventListener('click', e => {
 const easPickerSideCount = document.getElementById('eas-picker-side-count');
 easPickerSideCount.addEventListener('input', e=> {
     const easPickerValue = document.getElementById('eas-picker-value');
-    easPickerValue.textContent = easPickerSideCount.value;
+    easPickerValue.textContent = easPickerSideCount.value + 'x' + easPickerSideCount.value;
+    resetSketch();
 })
 
 /* set handler for reset button */

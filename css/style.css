@@ -180,6 +180,7 @@ button > * {
     display: grid;
     grid-template-columns: repeat(var(--eas-box-per-side), 1fr);
     grid-template-rows: repeat(var(--eas-box-per-side), 1fr);
+
     width: 80%;
     height: 80%;
     border: 1px solid black;
@@ -187,8 +188,10 @@ button > * {
     padding: 10px;
     box-shadow: 1px 1px 3px black inset;
     border-radius: 20px;
-    overflow: hidden;
     background-color: silver;
+
+    overflow: hidden;
+    touch-action: none;
 }
 
 

@@ -2,6 +2,8 @@
     --eas-box-per-side: 16;
 }
 
+/* GENERAL */
+
 html {
     box-sizing: border-box;
   }
@@ -32,21 +34,24 @@ main {
 }
 
 button {
-    border: 1px solid hsla(0, 100%, 0%, 10%);
     padding: 5px;
+    border: 1px solid hsla(0, 100%, 0%, 10%);
     border-radius: 5px;
 }
 
 button > * {
-    pointer-events: none;
+    pointer-events: none; /* prevents items in button from firing */
 }
 
+/* OPTIONS PICKER */
+
 #eas-picker {
-    width: 100%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    width: 100%;
+    padding: 20px;
     align-items: center;
 }
 
@@ -57,7 +62,7 @@ button > * {
     gap: 10px;
 
     width: 100%;
-    padding: 10px;
+    padding: 6px;
     border: 1px solid hsla(0, 100%, 0%, 10%);
     border-radius: 5px;
     background-color: hsl(240, 100%, 50%, 10%)
@@ -118,22 +123,25 @@ button > * {
     );
 }
 
+/* Etch-a-Sketch */
+
 #eas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 90vmin;
+    width: 90vmin;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 6% 0 0 0;
     background: linear-gradient(
         120deg,
         hsl(0, 100%, 50%) 0%,
         hsl(0, 100%, 40%) 100%
     );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 40px;
-    padding: 6% 0 0 0;
-    height: 90vmin;
-    width: 90vmin;
-    min-width: 300px;
-    min-height: 300px;
-    box-shadow: inset 5px 5px 20px hsla(0, 100%, 0%, 50%), 5px 5px 20px black;
+    box-shadow: inset 5px 5px 20px hsla(0, 100%, 0%, 50%), 10px 10px 20px hsla(0, 100%, 0%, 80%);
 }
 
 .shake {
@@ -177,7 +185,7 @@ button > * {
     border: 1px solid black;
     margin: 0;
     padding: 10px;
-    box-shadow: 1px 1px 5px black inset;
+    box-shadow: inset 1px 1px 5px black, 0px 0px 10px hsla(0, 100%, 0%, 50%);
     border-radius: 20px;
     background-color: silver;
 
@@ -192,6 +200,8 @@ button > * {
     padding: 0;
     background-color: silver;
 }
+
+/* RESET */
 
 #reset-button {
     width: 200px;

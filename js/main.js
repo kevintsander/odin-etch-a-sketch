@@ -18,6 +18,13 @@ function createSketchBoxes(countPerSide) {
         newDiv.addEventListener('mouseover', e => {
             setSketchBoxColor(e.target);
         });
+        newDiv.addEventListener('touchmove', e => {
+            let touchLocation = e.touches[0];
+            let target = document.elementFromPoint(touchLocation.clientX, touchLocation.clientY);
+            if (target.classList.contains('eas-block')) {
+                setSketchBoxColor(target);
+            }
+        });
 
         easDrawContainer.appendChild(newDiv);
     }

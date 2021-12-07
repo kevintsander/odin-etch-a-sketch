@@ -11,6 +11,8 @@ html {
 
 body {
     height: 100vh;
+    /* fix for safari top bar with webkit */
+    height: -webkit-fill-available;
     margin: 0;
     padding: 0;
 }

@@ -1,16 +1,16 @@
 let sketchType = "random";
 
 function resetSketch() {
-    const easContainer = document.getElementById('eas-draw-container');
-    while (easContainer.firstChild) {
-        easContainer.removeChild(easContainer.lastChild);
+    const easDrawContainer = document.getElementById('eas-draw-container');
+    while (easDrawContainer.firstChild) {
+        easDrawContainer.removeChild(easDrawContainer.lastChild);
     }
     let countPerSide = document.getElementById('eas-picker-side-count').value;
     setSketchBoxCount(countPerSide);
 }
 
 function createSketchBoxes(countPerSide) {
-    const easContainer = document.getElementById('eas-draw-container');
+    const easDrawContainer = document.getElementById('eas-draw-container');
 
     for (let i = 0; i < (countPerSide * countPerSide); i++) {
         const newDiv = document.createElement('div');
@@ -19,7 +19,7 @@ function createSketchBoxes(countPerSide) {
             setSketchBoxColor(e.target);
         });
 
-        easContainer.appendChild(newDiv);
+        easDrawContainer.appendChild(newDiv);
     }
 }
 
@@ -73,21 +73,28 @@ function setSketchType(newSketchType) {
     console.log(`Sketch type: ${sketchType}`);
 }
 
+/* set handlers for sketch type buttons */
 const sketchTypeButtons = document.querySelectorAll('.sketch-type-button');
 sketchTypeButtons.forEach(button => button.addEventListener('click', e => {
     setSketchType(e.target.getAttribute('data-sketch-type'));
 }));
 
+/* set handler to change displayed value when slider changed */
 const easPickerSideCount = document.getElementById('eas-picker-side-count');
 easPickerSideCount.addEventListener('mouseup', e=> {
     const easPickerValue = document.getElementById('eas-picker-value');
     easPickerValue.textContent = easPickerSideCount.value;
 })
 
-const resetButton = document.getElementById('reset');
+/* set handler for reset button */
+const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', e => {
+    const easContainer = document.getElementById('eas-container');
+    easContainer.classList.toggle("shake");
+    setTimeout(() => easContainer.classList.toggle("shake"), 750);
     resetSketch();
 })
 
+/* initialize page */
 setSketchType('black');
 resetSketch();

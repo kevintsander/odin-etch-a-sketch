@@ -19,6 +19,7 @@ function createSketchBoxes(countPerSide) {
             setSketchBoxColor(e.target);
         });
         newDiv.addEventListener('touchmove', e => {
+            e.preventDefault();
             let touchLocation = e.touches[0];
             let target = document.elementFromPoint(touchLocation.clientX, touchLocation.clientY);
             if (target.classList.contains('eas-block')) {

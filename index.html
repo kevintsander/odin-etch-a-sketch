@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
+    <title>Kev-a-Sketch</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 </head>
-<body>
-    
-    <div id="eas-draw-container">
 
-    </div>
+<body>
+
+    <main>
+        <div id="eas-picker">
+            <div id="eas-picker-resolution">
+                <label for="eas-picker-side-count">
+                    Resolution:
+                    <input id="eas-picker-side-count" type="range" min="16" max="100" name="eas-picker-side-count" value="50">
+                </label>
+            </div>
+            <div id="eas-picker-type-selector">
+                <button class="sketch-type" data-sketch-type="black">
+                    <p>Black</p>
+                    <div class="sketch-type-color-bar" id="sketch-type-black-bar"></div>
+                </button>
+                <button class="sketch-type" data-sketch-type="random">
+                    <p>Random</p>
+                    <div class="sketch-type-color-bar" id="sketch-type-random-bar"></div>
+                </button>
+                <button class="sketch-type" data-sketch-type="rainbow">
+                    <p>Rainbow</p>
+                    <div class="sketch-type-color-bar" id="sketch-type-rainbow-bar"></div>
+                </button>
+            </div>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="eas-container">
+            <div id="eas-draw-container">
+
+            </div>
+            <h1>Kev-a-Sketch</h1>
+        </div>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

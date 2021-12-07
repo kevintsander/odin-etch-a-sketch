@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,26 +17,26 @@
     <main>
         <div id="eas-picker">
             <div id="eas-picker-resolution">
-                <label for="eas-picker-side-count">
-                    Resolution:
-                    <input id="eas-picker-side-count" type="range" min="16" max="100" name="eas-picker-side-count" value="50">
-                </label>
+                <img src="images/grid_64x64.png" width="24px" height="24px">
+                <input id="eas-picker-side-count" type="range" min="16" max="100" name="eas-picker-side-count"
+                    value="50">
+                <p id="eas-picker-value">50</p>
             </div>
-            <div id="eas-picker-type-selector">
-                <button class="sketch-type" data-sketch-type="black">
+            <div id="eas-picker-types">
+                <img src="images/pencil_64x64.png" width="24px" height="24px">
+                <button class="sketch-type-button" data-sketch-type="black">
                     <p>Black</p>
                     <div class="sketch-type-color-bar" id="sketch-type-black-bar"></div>
                 </button>
-                <button class="sketch-type" data-sketch-type="random">
+                <button class="sketch-type-button" data-sketch-type="random">
                     <p>Random</p>
                     <div class="sketch-type-color-bar" id="sketch-type-random-bar"></div>
                 </button>
-                <button class="sketch-type" data-sketch-type="rainbow">
+                <button class="sketch-type-button" data-sketch-type="rainbow">
                     <p>Rainbow</p>
                     <div class="sketch-type-color-bar" id="sketch-type-rainbow-bar"></div>
                 </button>
             </div>
-            <button id="reset">Reset</button>
         </div>
         <div id="eas-container">
             <div id="eas-draw-container">
@@ -44,6 +44,7 @@
             </div>
             <h1>Kev-a-Sketch</h1>
         </div>
+        <button id="reset">Reset</button>
     </main>
 
     <script src="js/main.js"></script>

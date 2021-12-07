@@ -88,7 +88,7 @@ sketchTypeButtons.forEach(button => button.addEventListener('click', e => {
 
 /* set handler to change displayed value when slider changed */
 const easPickerSideCount = document.getElementById('eas-picker-side-count');
-easPickerSideCount.addEventListener('mouseup', e=> {
+easPickerSideCount.addEventListener('oninput', e=> {
     const easPickerValue = document.getElementById('eas-picker-value');
     easPickerValue.textContent = easPickerSideCount.value;
 })
